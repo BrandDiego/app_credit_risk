@@ -10,10 +10,10 @@ def connect_to_snowflake():
     """
     try:
         connection = snowflake.connector.connect(
-            user=os.getenv("urcuqui"),
-            password=os.getenv("LZJGinRcN6TiNudsJIllOcgp"),
-            account=os.getenv("ctb59899.us-east-1"),
-            warehouse=os.getenv("WH_ICESI")
+            user=os.getenv("SNOWFLAKE_USER"),
+            password=os.getenv("SNOWFLAKE_PASSWORD"),
+            account=os.getenv("SNOWFLAKE_ACCOUNT"),
+            warehouse=os.getenv("SNOWFLAKE_WAREHOUSE")
         )
         print("Conexión a Snowflake establecida correctamente.")
         return connection
